@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Hello World! Some html in django huh?</h1>
+<form action='add' method='post'>
+    {% csrf_token %}
+    Enter first number:<input type='text' name='number1'><br>
+    Enter second number:<input type='text' name='number2'><br>
+    <input type='submit'>
+</form>
+{% endblock %}
+{% comment %}In order for the above h1 text to be displayed on a web page,we have to make changes in the settings.py file on DIRS and then make changes in the views file {% endcomment %}
